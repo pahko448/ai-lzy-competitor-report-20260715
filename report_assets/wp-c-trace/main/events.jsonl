@@ -1,2 +1,0 @@
-{"at":"2026-07-14T11:34:15.203Z","type":"turn","flow":"main","label":"initial-question","input":"【虚构测试场景】我在筹备一个读书会时，两位合作伙伴对线上还是线下意见不同。我有些紧张，担心协调不好会让关系变僵，也不知道明天第一步该做什么。","state":{"flow":"main","evidenceMode":"visible-dom","beforeMessageCount":26,"afterMessageCount":28}}
-{"at":"2026-07-14T11:34:50.134Z","type":"turn","flow":"main","label":"context-follow-up","input":"沿着你刚才的分析继续问：如果我明天只能先做一件事，我应该先处理自己的紧张，还是先澄清双方的共同目标？请说明理由，并给出一句可以直接开口的话。","state":{"flow":"main","evidenceMode":"visible-dom","beforeMessageCount":28,"afterMessageCount":30}}

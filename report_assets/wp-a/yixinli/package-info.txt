@@ -1,3 +1,0 @@
-﻿package=com.xinli.yixinli
-    versionCode=100110025 minSdk=21 targetSdk=33
-    versionName=11.0.25

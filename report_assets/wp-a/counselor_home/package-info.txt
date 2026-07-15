@@ -1,3 +1,0 @@
-﻿package=com.yixinli.counselor
-    versionCode=1034 minSdk=24 targetSdk=34
-    versionName=3.6.9
