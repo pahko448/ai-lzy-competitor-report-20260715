@@ -1,0 +1,128 @@
+{
+  "audit_date": "2026-07-14",
+  "timezone": "Asia/Shanghai",
+  "record_id": "MR-1783936211119-b55ba3f5",
+  "space_id": "7519708884118978575",
+  "scope": "read-only object and contract inspection; no run, save, publish or configuration changes",
+  "sources": [
+    "Coze workflow canvas visible DOM",
+    "AI-lizhongying-wx/config.js",
+    "AI-lizhongying-wx/pagesSub/healing/healing.vue",
+    "AI-lizhongying-wx/pagesSub/healing/coze-workflow.js"
+  ],
+  "sample": {
+    "workflow_objects": 5,
+    "audited_conversation_turns": 2,
+    "audited_session_messages": 4
+  },
+  "workflows": [
+    {
+      "business_name": "关键词判断",
+      "canvas_name": "KeyWordsJudge",
+      "workflow_id": "7533100739335307327",
+      "source_constant": "KeywordJude_Workflow_id",
+      "start_inputs": ["user_input"],
+      "end_outputs": ["flag"],
+      "core_node": "意图识别",
+      "core_node_outputs": ["flag", "reasoning_content"],
+      "model_visible": "豆包·1.8·深度思考",
+      "canvas_state": "published badge visible: Infinite published 05-20 10:33:54",
+      "page_consumes": ["flag"],
+      "page_does_not_consume": ["reasoning_content"]
+    },
+    {
+      "business_name": "Aha 判断",
+      "canvas_name": "SalesJudge",
+      "workflow_id": "7528013366696198190",
+      "source_constant": "SalesJudge_Workflow_id",
+      "start_inputs": ["conversations"],
+      "end_outputs": ["sales_yes"],
+      "core_node": "AhaMoment判断",
+      "core_node_outputs": ["sales_yes", "reasoning_content"],
+      "model_visible": "豆包·1.6·极致速度",
+      "canvas_state": "unpublished modifications badge visible; draft autosave 20:51:04",
+      "page_consumes": ["sales_yes"],
+      "page_does_not_consume": ["reasoning_content"]
+    },
+    {
+      "business_name": "营销话术生成",
+      "canvas_name": "SalesCreate",
+      "workflow_id": "7524552829635248163",
+      "source_constant": "SalesCreate_Workflow_id",
+      "start_inputs": ["conversations"],
+      "end_outputs": ["sales_text"],
+      "core_node": "产出软销售话术",
+      "core_node_outputs": ["sale_text", "reasoning_content"],
+      "model_visible": "豆包·1.8·深度思考",
+      "canvas_state": "unpublished modifications badge visible; draft autosave 06-30 18:29:43",
+      "page_consumes": ["sales_text"],
+      "page_does_not_consume": ["reasoning_content"],
+      "contract_risk": "core node sale_text and end output sales_text use different field names; mapping was visible only by canvas structure, not runtime trace"
+    },
+    {
+      "business_name": "金句判断",
+      "canvas_name": "GoldJudge",
+      "workflow_id": "7532759836813312041",
+      "source_constant": "GoldJudge_Workflow_id",
+      "start_inputs": ["deepthink", "conversations"],
+      "end_outputs": ["gold_flag"],
+      "core_node": "赋能时机判断",
+      "core_node_outputs": ["flag", "reasoning_content"],
+      "model_visible": "豆包·1.8·深度思考",
+      "canvas_state": "published badge visible: Infinite published 05-20 10:40:03",
+      "page_consumes": ["gold_flag"],
+      "page_does_not_consume": ["reasoning_content"]
+    },
+    {
+      "business_name": "金句检索/生成",
+      "canvas_name": "GoldSentence",
+      "workflow_id": "7532384514230009910",
+      "source_constant": "GoldCreate_Workflow_id",
+      "start_inputs": ["conversations"],
+      "end_outputs": ["gold_sentense"],
+      "core_nodes": ["知识库检索", "拼接", "金句拼接"],
+      "knowledge_bases_visible": ["金句知识库(最全)", "优选金句库"],
+      "canvas_state": "unpublished modifications badge visible; draft autosave 20:47:52",
+      "page_consumes": ["gold_sentense"],
+      "contract_risk": "gold_sentense is a stable but misspelled external contract and is appended to the next main-agent input"
+    }
+  ],
+  "two_turn_execution_classification": [
+    {
+      "module": "关键词判断",
+      "T1": "no-evidence",
+      "T2": "no-evidence",
+      "reason": "called asynchronously only when endMarketing=false; runtime flag and workflow run log were not available"
+    },
+    {
+      "module": "Aha 判断",
+      "T1": "no-evidence",
+      "T2": "no-evidence",
+      "reason": "reachable only after keyword flag is false; no independent run record"
+    },
+    {
+      "module": "营销话术生成",
+      "T1": "no-evidence",
+      "T2": "no-evidence",
+      "reason": "reachable after keyword hit, or after Aha hit and ahaCount threshold 5; no independent run record"
+    },
+    {
+      "module": "金句判断",
+      "T1": "skipped-by-condition",
+      "T2": "skipped-by-condition",
+      "reason": "new-session message count was 2 after T1 and 4 after T2; code requires count > 4"
+    },
+    {
+      "module": "金句检索/生成",
+      "T1": "skipped-by-condition",
+      "T2": "skipped-by-condition",
+      "reason": "new session starts with gold_flag=false, and GoldJudge could not set it during the first two turns"
+    }
+  ],
+  "limitations": [
+    "No workflow run history or execute_id was obtained for 19:33-19:34.",
+    "Unpublished canvas drafts cannot be treated as the version used by the production-equivalent mini program.",
+    "The mini-program debug port was not listening during this final object audit, so endMarketing and other live flags were not re-read.",
+    "No real user data, credentials or message content are included."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "audit_date": "2026-07-14",
+  "record_id": "MR-1783936211119-b55ba3f5",
+  "stage": "S2-native-chat-runtime",
+  "status": "T2-uniquely-matched",
+  "platform": "Coze China",
+  "method": [
+    "GET /v3/chat/retrieve",
+    "GET /v3/chat/message/list"
+  ],
+  "target": {
+    "bot_id": "7522843242162372671",
+    "conversation_id_suffix6": "720646",
+    "chat_id_suffix6": "418870",
+    "full_identifiers_recorded": false
+  },
+  "runtime": {
+    "status": "completed",
+    "created_at_unix": 1784028856,
+    "created_at_asia_shanghai": "2026-07-14 19:34:16",
+    "answer_created_at_unix": 1784028863,
+    "answer_created_at_asia_shanghai": "2026-07-14 19:34:23",
+    "completed_at_unix": 1784028875,
+    "completed_at_asia_shanghai": "2026-07-14 19:34:35",
+    "duration_seconds": 19,
+    "last_error_present": false,
+    "usage": {
+      "input_count": 3693,
+      "output_count": 470,
+      "token_count": 4163
+    }
+  },
+  "response_contract": {
+    "retrieve_keys": [
+      "bot_id",
+      "completed_at",
+      "conversation_id",
+      "created_at",
+      "id",
+      "status",
+      "usage"
+    ],
+    "messages": [
+      {
+        "role": "assistant",
+        "type": "answer",
+        "content_length": 203,
+        "expected_answer_anchor": true,
+        "expected_opening_line_anchor": true
+      },
+      {
+        "role": "assistant",
+        "type": "verbose",
+        "content_length": 121,
+        "json_keys": [
+          "data",
+          "from_module",
+          "from_unit",
+          "msg_type"
+        ],
+        "msg_type": "generate_answer_finish",
+        "data_content_recorded": false
+      }
+    ],
+    "business_structure_fields_present": {
+      "intent": false,
+      "suggested_route": false,
+      "handoff_summary": false,
+      "next_action": false,
+      "execution_id": false,
+      "trace_id": false
+    }
+  },
+  "match_basis": [
+    "target bot id",
+    "conversation and chat identifier fingerprints",
+    "19:34:16-19:34:35 runtime window",
+    "203-character answer and two expected content anchors"
+  ],
+  "verification_layer": "A - actual platform API runtime",
+  "not_proven_by_this_record": [
+    "T1 chat id and native record",
+    "keyword workflow execution",
+    "Aha workflow execution",
+    "marketing workflow execution",
+    "gold quote judgement/retrieval execution",
+    "internal node trace not exposed by Chat retrieve API"
+  ],
+  "privacy": "no token, user id, full correlation id, full message body, verbose data or unrelated history recorded"
+}

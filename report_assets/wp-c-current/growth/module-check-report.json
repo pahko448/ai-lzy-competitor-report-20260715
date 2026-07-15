@@ -1,0 +1,126 @@
+{
+  "generatedAt": "2026-07-14T10:30:41.665Z",
+  "registry": "D:\\大智慧\\Codex项目\\03_数据分析与增长归因\\二级项目\\03-03_小程序自动化与运营执行\\自动化脚本\\miniapp-modules.json",
+  "endpoint": "ws://127.0.0.1:9425",
+  "coverage": {
+    "modules": 13,
+    "registeredPages": 42,
+    "uniquePages": 42,
+    "safeChecks": 16,
+    "fixturePages": 26
+  },
+  "health": [
+    {
+      "round": 1,
+      "tool": {
+        "version": "1.06.2504060",
+        "SDKVersion": "2.25.3"
+      },
+      "stack": {
+        "pageStack": [
+          {
+            "pageId": 1,
+            "path": "pages/tabber/home/home",
+            "query": {}
+          },
+          {
+            "pageId": 2,
+            "path": "pagesSub/healing/healing",
+            "query": {}
+          }
+        ]
+      },
+      "current": {
+        "pageId": 2,
+        "path": "pagesSub/healing/healing",
+        "query": {}
+      },
+      "system": {
+        "platform": "devtools",
+        "model": "iPhone 12/13 (Pro)",
+        "SDKVersion": "2.25.3"
+      }
+    },
+    {
+      "round": 2,
+      "tool": {
+        "version": "1.06.2504060",
+        "SDKVersion": "2.25.3"
+      },
+      "stack": {
+        "pageStack": [
+          {
+            "pageId": 1,
+            "path": "pages/tabber/home/home",
+            "query": {}
+          },
+          {
+            "pageId": 2,
+            "path": "pagesSub/healing/healing",
+            "query": {}
+          }
+        ]
+      },
+      "current": {
+        "pageId": 2,
+        "path": "pagesSub/healing/healing",
+        "query": {}
+      },
+      "system": {
+        "platform": "devtools",
+        "model": "iPhone 12/13 (Pro)",
+        "SDKVersion": "2.25.3"
+      }
+    }
+  ],
+  "results": [
+    {
+      "moduleId": "growth",
+      "moduleName": "成长与情绪日历",
+      "checkId": "growth-calendar",
+      "checkName": "成长日历主入口",
+      "status": "passed",
+      "route": "/pages/tabber/calendar/calendar",
+      "expectedPath": "pages/tabber/calendar/calendar",
+      "actualPath": "pages/tabber/calendar/calendar",
+      "textHead": [
+        "07月14日",
+        "今天的情绪日历还没解锁哦",
+        "快去和李老师聊聊今天的心情，解锁今天的情绪日历吧",
+        "首页",
+        "日历",
+        "测评",
+        "我的"
+      ],
+      "navigationWarning": null,
+      "screenshot": {
+        "file": "归档证据\\2026-07-14-wp-c-growth-page-audit\\growth\\growth__growth-calendar.png",
+        "ok": true
+      },
+      "startedAt": "2026-07-14T10:30:43.754Z",
+      "completedAt": "2026-07-14T10:30:50.690Z"
+    }
+  ],
+  "fixtureCoverage": [
+    {
+      "moduleId": "growth",
+      "moduleName": "成长与情绪日历",
+      "path": "pagesSub/dialogueAnalysis/dialogueAnalysis",
+      "reason": "requires a daily analysis id"
+    },
+    {
+      "moduleId": "growth",
+      "moduleName": "成长与情绪日历",
+      "path": "pagesSub/dialogueAnalysis/dialogueAnalysisDetail",
+      "reason": "requires a daily detail id"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "blockedLogin": 0,
+    "skipped": 0,
+    "failed": 0,
+    "fixturePages": 2
+  },
+  "completedAt": "2026-07-14T10:30:50.690Z"
+}

@@ -1,0 +1,83 @@
+{
+  "audit_date": "2026-07-14",
+  "record_id": "MR-1783936211119-b55ba3f5",
+  "stage": "S1-correlation-recovery",
+  "status": "completed",
+  "environment": "WeChat DevTools test environment; user-confirmed same agent as formal environment",
+  "target_bot_id": "7522843242162372671",
+  "source": {
+    "route": "pagesSub/healing/healing",
+    "method": "read-only mini program App runtime evaluation of current Vue page instance",
+    "visible_page_control": false,
+    "external_request": false,
+    "new_message_sent": false
+  },
+  "coze_correlation": {
+    "conversation_id": {
+      "present": true,
+      "length": 19,
+      "suffix6": "720646",
+      "sha256": "0028768d794f466541a5ec88334f92d522f13d5d1e59a33130ec40fb7cf842bc"
+    },
+    "current_chat_id_candidate": {
+      "present": true,
+      "length": 19,
+      "suffix6": "418870",
+      "sha256": "840cb020ef6efcbc67c73e816c0c28b01b027d8b0ff5e27ddc68d1938dc54403",
+      "interpretation": "T2 candidate based on page end state and code lifecycle; requires Coze-log confirmation"
+    },
+    "t1_chat_id": null,
+    "execution_id": null,
+    "trace_id": null
+  },
+  "test_window": {
+    "timezone": "Asia/Shanghai",
+    "messages": [
+      {
+        "turn": "T1",
+        "role": "user",
+        "chat_time": "2026-07-14 19:33:38",
+        "business_session_sha256": "8ec0955df11b2af425299bb2a922308ea5c116a597d29346954363c5f18820bf",
+        "record_sha256": "cd78ef3204d0b02eb6f41185b25c56131565e0134d9c0ae973d6c3430c3facb9",
+        "message_id_suffix6": "268097"
+      },
+      {
+        "turn": "T1",
+        "role": "assistant",
+        "chat_time": "2026-07-14 19:33:59",
+        "business_session_sha256": "8ec0955df11b2af425299bb2a922308ea5c116a597d29346954363c5f18820bf",
+        "record_sha256": "cd78ef3204d0b02eb6f41185b25c56131565e0134d9c0ae973d6c3430c3facb9",
+        "message_id_suffix6": "268098"
+      },
+      {
+        "turn": "T2",
+        "role": "user",
+        "chat_time": "2026-07-14 19:34:16",
+        "business_session_sha256": "8ec0955df11b2af425299bb2a922308ea5c116a597d29346954363c5f18820bf",
+        "record_sha256": "a9d71d5bbc54179ddc18d9418b7ae326c16c6ed826753036dc2fd3e21dda4b89",
+        "message_id_suffix6": "136450"
+      },
+      {
+        "turn": "T2",
+        "role": "assistant",
+        "chat_time": "2026-07-14 19:34:34",
+        "business_session_sha256": "8ec0955df11b2af425299bb2a922308ea5c116a597d29346954363c5f18820bf",
+        "record_sha256": "a9d71d5bbc54179ddc18d9418b7ae326c16c6ed826753036dc2fd3e21dda4b89",
+        "message_id_suffix6": "136451"
+      }
+    ]
+  },
+  "confirmed": [
+    "the two audited turns are present in the current runtime message history",
+    "all four audited messages share the same saved business session fingerprint",
+    "each question-answer pair shares one business record fingerprint",
+    "a 19-digit Coze conversation id and a 19-digit current chat id candidate are recoverable from the runtime instance"
+  ],
+  "not_yet_confirmed": [
+    "the T1 Coze chat id",
+    "the Coze execution/trace ids for either turn",
+    "the exact Coze node and workflow paths",
+    "whether the current chat id candidate uniquely maps to T2"
+  ],
+  "privacy": "full correlation identifiers, user identity, token, message body and unrelated history are not recorded"
+}

@@ -1,0 +1,307 @@
+evidence_register:
+  - evidence_id: E-ANT-01
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App com.antgroup.aijk.android"
+    captured_at: "2026-07-14 18:13 Asia/Shanghai"
+    surface: launch/home
+    description: "首页显示健康助手主张、我的健康、睡眠问题快捷入口、新人见面礼、AI诊室、报告解读、拍皮肤、就医服务。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/01_after_12s.png"
+    proves: ["AI健康助手是首屏入口", "健康档案/服务/咨询并列", "存在可点击的健康问题快捷入口"]
+    cannot_prove: ["真实使用规模", "医疗效果", "转化率", "收入"]
+  - evidence_id: E-ANT-02
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App"
+    captured_at: "2026-07-14 18:14 Asia/Shanghai"
+    surface: health_archive
+    description: "睡眠快捷入口落到健康档案；页面要求一键绑定/连接设备/同步睡眠、血压血糖、心率等数据，并声明档案仅本人使用。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/02_sleep_cta.png"
+    proves: ["健康档案是服务承接层", "设备/数据绑定是个性化建议前置条件", "有隐私边界文案"]
+    cannot_prove: ["绑定率", "设备接入规模", "健康建议准确率"]
+  - evidence_id: E-ANT-03
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App"
+    captured_at: "2026-07-14 18:15 Asia/Shanghai"
+    surface: ai_clinic
+    description: "AI诊室流程明确展示 01选择咨询人 → 02描述症状 → 03诊疗建议；支持本人/切换咨询人，并提示可上传检查报告。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/03_ai_clinic.png"
+    proves: ["AI与健康问诊有显式阶段分流", "输入可包含文本和检查报告", "存在咨询对象切换"]
+    cannot_prove: ["临床诊断能力", "医生转介效果", "上传率"]
+  - evidence_id: E-ANT-04
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App；虚构非敏感输入"
+    captured_at: "2026-07-14 18:16 Asia/Shanghai"
+    surface: ai_clinic_response
+    description: "用虚构英文睡眠作息问题观察到先给一般建议，再追问作息细节；未上传报告、未输入真实健康信息。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/05_fictional_query_response.png"
+    proves: ["AI回答采用一般建议→个性化追问结构", "页面有健康咨询免责声明边界的产品语境"]
+    cannot_prove: ["建议安全性/有效性", "医疗诊断", "持续使用"]
+  - evidence_id: E-ANT-05
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App；虚构非敏感多轮问询"
+    captured_at: "2026-07-14 19:00-19:05 Asia/Shanghai"
+    surface: ai_clinic_multiturn
+    description: "完成多轮追问：睡眠质量/白天困倦→打鼾与呼吸暂停→晨起头痛/酸痛→工作压力/时差/咖啡→既往检查与用药→高血压/糖尿病/甲状腺史→补充信息。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/07_turn2_sleep_schedule.png; 08_turn3_choice.png; 09_turn4_safety_followup.png; 10_turn5_advice.png; 11_turn6_context.png; 12_turn7_history.png; 13_final_triage_or_advice.png"
+    proves: ["AI诊室采用逐层问询而非一次性表单", "问询覆盖症状、危险信号、既往史和生活因素", "流程可持续多轮"]
+    cannot_prove: ["问询完整性", "医学安全性", "真实分诊准确率"]
+  - evidence_id: E-ANT-06
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App；虚构非敏感多轮问询"
+    captured_at: "2026-07-14 19:06 Asia/Shanghai"
+    surface: ai_clinic_final_advice
+    description: "最终输出包含睡眠解释、生活调理、需警惕信号和何时就医；页面同时保留 AI诊室/报告解读/拍皮肤/就医服务入口。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/14_final_advice.png"
+    proves: ["问询结果会生成结构化长文建议", "建议包含风险警示与就医分流", "结果后仍可继续进入其他健康服务"]
+    cannot_prove: ["建议正确性", "就医分流效果", "用户是否采纳"]
+  - evidence_id: E-ANT-07
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App；观察到的模型输出风险"
+    captured_at: "2026-07-14 19:06 Asia/Shanghai"
+    surface: safety_quality
+    description: "在虚构输入下，模型将作息复述为11点至6点，并推断‘生理性短睡眠者’、给出1%-3%比例及具体环境/饮食建议；这些是观察到的生成内容，不作医学事实。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/14_final_advice.png"
+    proves: ["存在事实复述偏差与过度具体化风险", "高信任健康 AI 需要引用/证据与人工边界校验"]
+    cannot_prove: ["该风险在所有用户/版本中普遍存在"]
+  - evidence_id: E-ANT-08
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App 顶部智能体入口"
+    captured_at: "2026-07-14 19:13 Asia/Shanghai"
+    surface: agent_marketplace
+    description: "顶部智能体页面提供搜索服务、我的关注/最近使用、百大名医/就医医保/减重专区/健康生活分类，以及院士领衔、国医大师、乳腺专科等筛选。专家卡展示 AI 标识、资质、医院、擅长方向与咨询人数。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/15_top_agents_entry.png"
+    proves: ["顶部智能体是专家AI分身目录/市场", "专家身份与专业标签是选择依据", "平台有分类与搜索发现机制"]
+    cannot_prove: ["咨询人数真实性", "专家实际参与程度", "转化率/收入"]
+  - evidence_id: E-ANT-09
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App；Jack安心智能体"
+    captured_at: "2026-07-14 19:15 Asia/Shanghai"
+    surface: agent_profile
+    description: "王建安智能体详情页展示医生姓名/头像、心血管内科、三甲/复旦top10/医院、专业擅长/团队简介/获奖荣誉，并声明为医生AI分身，接受心脏瓣膜病专业培训；下方提供健康管理、报告解读、病情分析、新手指南、加班门诊等快捷入口。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/17_agent_wang_home.png"
+    proves: ["专家分身以身份背书+知识范围+快捷任务组织", "服务入口从聊天扩展到报告/病情/管理"]
+    cannot_prove: ["真人医生审核每条回答", "培训质量", "医疗效果"]
+  - evidence_id: E-ANT-10
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App；Jack安心智能体"
+    captured_at: "2026-07-14 19:18 Asia/Shanghai"
+    surface: agent_dialogue
+    description: "对不完整输入‘What g’的处理：智能体明确指出问题不完整，要求补充，并把可处理范围限定在心血管相关问题，同时建议其他系统问题咨询对应专科。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/19_agent_wang_reply.png"
+    proves: ["智能体有输入完整性检查", "有专业范围路由/拒答边界", "可将用户导向对应专科"]
+    cannot_prove: ["范围识别无误率", "拒答安全性"]
+  - evidence_id: E-ANT-11
+    evidence_tier: Tier 1
+    source: "蚂蚁阿福 App；Jack安心智能体预置问题"
+    captured_at: "2026-07-14 19:19 Asia/Shanghai"
+    surface: agent_grounded_answer
+    description: "点击预置问题‘如何预防三高？’后，结果展示医学思考路径、引用文献内容3篇、模型调用、王建安院士团队知识库和根据医学专业文献分析。"
+    file_or_url: "归档证据/WP-A_2026-07-14/ant_afu/20_agent_preset_hypertension.png; 21_agent_preset_final.png"
+    proves: ["答案可视化展示知识来源/思考路径", "专家智能体有知识库与文献检索承接", "预置问题降低首次使用门槛"]
+    cannot_prove: ["引用内容正确性", "思考路径等同真实推理", "医生实时审核"]
+  - evidence_id: E-CZH-01
+    evidence_tier: Tier 1
+    source: "咨询师之家 App com.yixinli.counselor"
+    captured_at: "2026-07-14 18:08 Asia/Shanghai"
+    surface: home
+    description: "首页分区含咨询观摩、督导教学、心理课程、心理咨询、个人体验、AI练习室、公开课、心理评估，并有直播/回放、会员续费与课程推广。"
+    file_or_url: "归档证据/WP-A_2026-07-14/counselor_home/01_after_skip.png"
+    proves: ["专业成长内容与练习并列", "会员/课程/直播是可见商业承接", "AI练习室是主导航级入口"]
+    cannot_prove: ["会员续费率", "课程转化率", "训练效果"]
+  - evidence_id: E-CZH-02
+    evidence_tier: Tier 1
+    source: "咨询师之家 App"
+    captured_at: "2026-07-14 18:11 Asia/Shanghai"
+    surface: ai_practice_room
+    description: "AI练习室首页显示 AI×咨询师之家、案例卡、进入练习，底部按咨询基本功/流派技术/咨询议题/咨询伦理组织。"
+    file_or_url: "归档证据/WP-A_2026-07-14/counselor_home/05_ai_practice.png"
+    proves: ["练习以案例和专业技能为入口", "内容按专业知识结构组织", "存在直接进入练习 CTA"]
+    cannot_prove: ["技能提升", "真实完课率"]
+  - evidence_id: E-CZH-03
+    evidence_tier: Tier 1
+    source: "咨询师之家 App；虚构非敏感练习"
+    captured_at: "2026-07-14 18:12 Asia/Shanghai"
+    surface: practice_session
+    description: "案例背景为作业压力导致情绪失控的小学生；练习显示来访者状态、咨询师输入、AI来访者回应和 1/10 对话轮次。"
+    file_or_url: "归档证据/WP-A_2026-07-14/counselor_home/06_enter_practice.png"
+    proves: ["练习是多轮角色模拟", "案例背景与技能目标前置", "有明确轮次进度"]
+    cannot_prove: ["与真人咨询等价", "儿童心理干预效果"]
+  - evidence_id: E-CZH-04
+    evidence_tier: Tier 1
+    source: "咨询师之家 App"
+    captured_at: "2026-07-14 18:12 Asia/Shanghai"
+    surface: reply_hint
+    description: "回复提示根据来访者状态解释风险/情绪，并给出接纳情绪、建立安全感的建议话术。"
+    file_or_url: "归档证据/WP-A_2026-07-14/counselor_home/07_reply_hint.png"
+    proves: ["产品输出不只给分数，还给过程性反馈", "反馈与当前对话状态绑定"]
+    cannot_prove: ["反馈质量的专家一致性", "咨询结果改善"]
+  - evidence_id: E-CZH-05
+    evidence_tier: Tier 1
+    source: "咨询师之家 App"
+    captured_at: "2026-07-14 18:42-18:43 Asia/Shanghai"
+    surface: reflection_and_feedback
+    description: "10轮练习后进入个案反思：回顾不恰当情绪/过度共鸣/排斥，并进入案例评分；随后展示 AI训练室体验评估问卷，询问咨询经验、受督小时、流派、AI使用意愿与练习满意度。"
+    file_or_url: "归档证据/WP-A_2026-07-14/counselor_home/26_round10_or_complete.png; 28_resume_after_complete.xml"
+    proves: ["练习后有反思/评分/反馈研究闭环", "产品围绕专业身份和督导经验收集反馈"]
+    cannot_prove: ["评分有效性", "问卷完成率", "模型训练效果"]
+  - evidence_id: E-CZH-06
+    evidence_tier: Tier 1
+    source: "咨询师之家 App"
+    captured_at: "2026-07-14 18:09-18:11 Asia/Shanghai"
+    surface: records_and_transcripts
+    description: "学习记录显示 VIP有效期、练习未完成/未通关/继续学习；逐字稿区按案例、技能和阶段展示，首页有会员续费与直播回放。"
+    file_or_url: "归档证据/WP-A_2026-07-14/counselor_home/13_learning_records.xml; 12_transcripts.xml"
+    proves: ["练习被沉淀为可召回学习资产", "存在会员与持续学习承接"]
+    cannot_prove: ["续费因果", "留存率", "会员收入"]
+  - evidence_id: E-YXL-01
+    evidence_tier: Tier 1
+    source: "壹心理 App com.xinli.yixinli"
+    captured_at: "2026-07-14 18:47 Asia/Shanghai"
+    surface: home
+    description: "首屏导航为口碑精选、社区、即时倾诉、心理咨询、学堂、我的；内容区在当前网络下为空态/加载态。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/01_after_10s.png"
+    proves: ["平台将内容/社区/倾诉/咨询/学堂分层", "首屏具有多业务入口"]
+    cannot_prove: ["内容规模", "真实流量与转化"]
+  - evidence_id: E-YXL-02
+    evidence_tier: Tier 1
+    source: "壹心理 App"
+    captured_at: "2026-07-14 18:48 Asia/Shanghai"
+    surface: consultation_landing
+    description: "心理咨询入口展示来访无忧保障：24小时免费取消、拒单补偿、1v1人工匹配，并提供新人首单立减50元。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/02_consultation.png"
+    proves: ["信任/风险降低机制前置", "真人匹配是转换承接", "有新人优惠价格信号"]
+    cannot_prove: ["实际退款率", "匹配成功率", "成交率"]
+  - evidence_id: E-YXL-03
+    evidence_tier: Tier 1
+    source: "壹心理 App"
+    captured_at: "2026-07-14 18:48 Asia/Shanghai"
+    surface: counselor_list
+    description: "咨询师列表展示议题标签、资质/督导、经验小时、可约时间、服务方式、价格（可见400-800元/次样本）和好评。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/03_consultation_visible.png"
+    proves: ["专家服务以供给筛选和预约为核心", "公开价格与资格信号共存"]
+    cannot_prove: ["真实成交/咨询效果", "平台抽佣或利润"]
+  - evidence_id: E-PH-01
+    evidence_tier: Tier 1
+    source: "平安好医生 App com.pingan.papd"
+    captured_at: "2026-07-14 18:18 Asia/Shanghai"
+    surface: home
+    description: "首页聚合北大医疗、财险、银行、寿险、企业福利等生态导航；问诊输入框提供问发热/查用药/找商品/问智医；服务宫格含智享家医、名医专家、健康药房、体检检测等。"
+    file_or_url: "归档证据/WP-A_2026-07-14/pingan_health/01_after_12s.png"
+    proves: ["健康服务与保险/银行/企业福利形成生态入口", "AI问诊、真人专家、药房和体检并列"]
+    cannot_prove: ["服务使用量", "医疗质量", "交叉销售效果"]
+  - evidence_id: E-PH-02
+    evidence_tier: Tier 1
+    source: "平安好医生 App"
+    captured_at: "2026-07-14 18:19 Asia/Shanghai"
+    surface: health_service_promotion
+    description: "从问诊入口进入体检促销页，展示体检套餐低至5折、先领券后下单、双人体检等商品化承接；未下单。"
+    file_or_url: "归档证据/WP-A_2026-07-14/pingan_health/02_ask_ai_entry.png"
+    proves: ["健康内容/问诊入口可导向体检商品", "券与套餐是商业化 CTA"]
+    cannot_prove: ["购买率", "优惠真实成本", "医疗服务效果"]
+  - evidence_id: E-PH-03
+    evidence_tier: Tier 1
+    source: "平安好医生 App 首页问智医/智享家医"
+    captured_at: "2026-07-14 19:32 Asia/Shanghai"
+    surface: home_ai_dialogue_entry
+    description: "首页问智医入口进入智享家医对话页；页头标注‘AI秒应 真人护航’，并提供购药、挂号、体检、健康药房等服务标签和输入框。"
+    file_or_url: "归档证据/WP-A_2026-07-14/pingan_health/07_ask_zhiyi_dialogue.png"
+    proves: ["首页AI问诊与真人护航并置", "AI对话结果页保留医疗服务承接", "对话入口不是单独的聊天产品而是健康服务中枢"]
+    cannot_prove: ["真人介入率", "服务转化率", "问诊质量"]
+  - evidence_id: E-PH-04
+    evidence_tier: Tier 1
+    source: "平安好医生 App；虚构非敏感输入"
+    captured_at: "2026-07-14 19:35 Asia/Shanghai"
+    surface: ai_dialogue_response
+    description: "对‘How can I build healthy habits?’的乱码输入，AI先纠错理解，再给规律作息/饮食/运动三段式建议、参考资料5篇和快速提问；结果页提供便捷购药、去评价、拍报告、更多服务，并标注平台AI大模型生成。"
+    file_or_url: "归档证据/WP-A_2026-07-14/pingan_health/09_dialogue_reply.png; 09_dialogue_reply.xml"
+    proves: ["有输入纠错与意图恢复", "输出采用结构化长文+资料+下一问", "结果后有服务/反馈 CTA 与生成声明"]
+    cannot_prove: ["建议医学准确性", "参考资料是否逐条支撑回答", "CTA转化"]
+  - evidence_id: E-PH-05
+    evidence_tier: Tier 1
+    source: "平安好医生 App"
+    captured_at: "2026-07-14 19:32 Asia/Shanghai"
+    surface: privacy_boundary
+    description: "智享家医档案区展示健康档案完整度、风险状态、BMI/血压/血糖和生活习惯字段，并出现健康档案用户信息授权提示；本轮未同意授权。"
+    file_or_url: "归档证据/WP-A_2026-07-14/pingan_health/07_ask_zhiyi_dialogue.xml"
+    proves: ["AI对话与个人健康档案有潜在联动", "健康数据授权是独立闸门"]
+    cannot_prove: ["授权率", "数据使用范围之外的实际行为"]
+  - evidence_id: E-YXL-04
+    evidence_tier: Tier 1
+    source: "壹心理 App com.xinli.yixinli 对话主页"
+    captured_at: "2026-07-14 19:44 Asia/Shanghai"
+    surface: ai_dialogue_home
+    description: "对话主页以独立 AI 角色‘章鱼Alice’承接情绪倾诉；中部展示欢迎语与三个示例问题，底部固定‘帮我匹配老师’与‘总结今日情绪’，并保留语音、文本输入。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/current_dialogue_home.png; current_dialogue_home.xml"
+    proves: ["AI 对话被包装为陪伴式角色", "主页同时放置内容启动器与真人咨询转化入口", "文本/语音双输入降低倾诉门槛"]
+    cannot_prove: ["角色真实身份或专业资质", "主页入口点击率", "后续咨询转化率"]
+  - evidence_id: E-YXL-05
+    evidence_tier: Tier 1
+    source: "壹心理 App 对话主页示例问题"
+    captured_at: "2026-07-14 19:45 Asia/Shanghai"
+    surface: ai_dialogue_response
+    description: "AI 先共情复述低落感受，再提出‘低落是突然出现还是已持续一段时间’这一澄清问题；页面显示‘心理咨询助手正在分析问题’，完成后提供分享入口。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/04_dialogue_prompt1.png; 05_dialogue_prompt1_reply.png; yixinli_prompt1_reply.xml"
+    proves: ["回复采用共情确认→开放式澄清结构", "首轮不急于给建议或诊断", "分析状态文案制造等待与陪伴感"]
+    cannot_prove: ["危机识别覆盖率", "持续多轮记忆效果", "建议的临床有效性"]
+  - evidence_id: E-YXL-06
+    evidence_tier: Tier 1
+    source: "壹心理 App 对话主页底部声明与操作区"
+    captured_at: "2026-07-14 19:44 Asia/Shanghai"
+    surface: trust_and_conversion_boundary
+    description: "底部展示隐私保护/专利技术、‘回答由AI生成’及专利号；固定 CTA 为匹配老师与总结今日情绪，形成 AI 陪伴/情绪记录 → 真人咨询匹配的漏斗。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/current_dialogue_home.png; current_dialogue_home.xml"
+    proves: ["隐私与 AI 生成声明前置", "真人服务承接固定在输入区上方", "总结今日情绪是复访与沉淀钩子"]
+    cannot_prove: ["专利技术的实际保护范围", "情绪总结是否形成用户画像", "CTA 商业转化结果"]
+  - evidence_id: E-YXL-07
+    evidence_tier: Tier 1
+    source: "壹心理 App 连续对话体验"
+    captured_at: "2026-07-14 19:50-20:05 Asia/Shanghai"
+    surface: multi_turn_emotional_dialogue
+    description: "完成 5 个有效轮次：低落持续时间→睡眠影响→入睡困难→工作反刍→用户同意练习。AI 连续追问时间、症状表现与具体念头；在识别到工作反刍后提出‘思维刹车’练习，明确询问是否一起尝试，用户同意后给出 1-2 分钟呼吸/观察练习。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/07_round2_valid.png; 09_round3_sleep_onset_reply.png; 10_round4_work_rumination.png; 11_round5_tool_consent.png"
+    proves: ["多轮上下文能沿着睡眠/情绪/工作压力逐步收窄", "从共情到澄清再到可执行练习存在阶段性升级", "练习前有明确同意动作"]
+    cannot_prove: ["长期记忆与跨日复访", "危机识别与人工升级", "练习实际完成率及改善效果"]
+  - evidence_id: E-YXL-08
+    evidence_tier: Tier 1
+    source: "壹心理 App 总结今日情绪"
+    captured_at: "2026-07-14 20:05 Asia/Shanghai"
+    surface: emotion_summary_report
+    description: "点击‘总结今日情绪’后生成《每日情绪报告》：按 Fact/Emotion/Action 三段组织，提取工作压力持续两周、入睡困难、疲惫/低落/无力，并给出举手伸展呼吸、30秒固定物观察等微行动；同时提供回顾往期报告、生成分享海报、继续自我关怀等承接。"
+    file_or_url: "归档证据/WP-A_2026-07-14/yixinli/12_emotion_summary.png; yixinli_emotion_summary.xml"
+    proves: ["总结功能确实读取并整合本轮多轮对话", "输出从事实→情绪→行动建议结构化落地", "报告具备历史回顾、分享与自我关怀入口"]
+    cannot_prove: ["总结算法的跨日稳定性", "情绪分类准确率", "分享/回顾/行动完成率"]
+  - evidence_id: E-PUB-01
+    evidence_tier: Tier 2
+    source: "蚂蚁集团官方新闻稿"
+    captured_at: "2026-07-14"
+    surface: public_description
+    description: "官方称蚂蚁阿福升级健康陪伴、健康问答、健康服务，并强调 AI 不替代真人医生。"
+    file_or_url: "https://www.antgroup.com/news-media/press-releases/1765785600000"
+    proves: ["公开定位与高信任边界声明"]
+    cannot_prove: ["经营效果"]
+  - evidence_id: E-PUB-02
+    evidence_tier: Tier 2
+    source: "咨询师之家 App Store 页面"
+    captured_at: "2026-07-14"
+    surface: public_description
+    description: "公开描述提到练习后 AI 总结咨询能力表现并支持保存练习结果。"
+    file_or_url: "https://apps.apple.com/us/app/%E5%92%A8%E8%AF%A2%E5%B8%88%E4%B9%8B%E5%AE%B6-%E5%BF%83%E7%90%86%E5%92%A8%E8%AF%A2%E5%B8%88%E6%88%90%E9%95%BF%E4%B8%8E%E7%9D%A3%E5%AF%BC%E5%B9%B3%E5%8F%B0/id1480837923"
+    proves: ["公开产品卖点与一手体验方向一致"]
+    cannot_prove: ["实际练习效果"]
+  - evidence_id: E-PUB-03
+    evidence_tier: Tier 2
+    source: "壹心理新人权益官方页面"
+    captured_at: "2026-07-14"
+    surface: public_policy
+    description: "公开权益说明包含24小时前免费取消、拒单补偿、1v1个性化匹配。"
+    file_or_url: "https://m.xinli001.xin/activity/3474"
+    proves: ["信任机制可被官方公开政策支持"]
+    cannot_prove: ["政策实际触发率"]
+  - evidence_id: E-PUB-04
+    evidence_tier: Tier 2
+    source: "平安好医生 App Store 页面"
+    captured_at: "2026-07-14"
+    surface: public_description
+    description: "公开描述包含专业医疗健康服务、家庭医生、专科问诊、名医导航和7×24小时服务。"
+    file_or_url: "https://apps.apple.com/cn/app/%E5%B9%B3%E5%AE%89%E5%A5%BD%E5%8C%BB%E7%94%9F%E5%85%A8%E7%90%83%E7%89%88/id923920872"
+    proves: ["平台公开服务范围"]
+    cannot_prove: ["服务质量与转化"]

@@ -1,0 +1,109 @@
+{
+  "generatedAt": "2026-07-14T10:31:04.808Z",
+  "registry": "D:\\大智慧\\Codex项目\\03_数据分析与增长归因\\二级项目\\03-03_小程序自动化与运营执行\\自动化脚本\\miniapp-modules.json",
+  "endpoint": "ws://127.0.0.1:9425",
+  "coverage": {
+    "modules": 13,
+    "registeredPages": 42,
+    "uniquePages": 42,
+    "safeChecks": 16,
+    "fixturePages": 26
+  },
+  "health": [
+    {
+      "round": 1,
+      "tool": {
+        "version": "1.06.2504060",
+        "SDKVersion": "2.25.3"
+      },
+      "stack": {
+        "pageStack": [
+          {
+            "pageId": 4,
+            "path": "pages/tabber/calendar/calendar",
+            "query": {}
+          }
+        ]
+      },
+      "current": {
+        "pageId": 4,
+        "path": "pages/tabber/calendar/calendar",
+        "query": {}
+      },
+      "system": {
+        "platform": "devtools",
+        "model": "iPhone 12/13 (Pro)",
+        "SDKVersion": "2.25.3"
+      }
+    },
+    {
+      "round": 2,
+      "tool": {
+        "version": "1.06.2504060",
+        "SDKVersion": "2.25.3"
+      },
+      "stack": {
+        "pageStack": [
+          {
+            "pageId": 4,
+            "path": "pages/tabber/calendar/calendar",
+            "query": {}
+          }
+        ]
+      },
+      "current": {
+        "pageId": 4,
+        "path": "pages/tabber/calendar/calendar",
+        "query": {}
+      },
+      "system": {
+        "platform": "devtools",
+        "model": "iPhone 12/13 (Pro)",
+        "SDKVersion": "2.25.3"
+      }
+    }
+  ],
+  "results": [
+    {
+      "moduleId": "emotion-soothing",
+      "moduleName": "情绪舒缓",
+      "checkId": "emotion-soothing-entry",
+      "checkName": "情绪舒缓入口",
+      "status": "passed",
+      "route": "/pagesSub/emotionSoothing/emotionSoothing",
+      "expectedPath": "pagesSub/emotionSoothing/emotionSoothing",
+      "actualPath": "pagesSub/emotionSoothing/emotionSoothing",
+      "textHead": [
+        "今日剩余-4232783秒",
+        "进行中",
+        "退出",
+        "01 描述事件/心情",
+        "»",
+        "02 认知情绪",
+        "03 情绪舒缓",
+        "04 问询结果",
+        "你好，我是 AI李中莹。\n咱们先不急着解决问题，先把这份情绪放清楚一点。\n你可以先说说：最近让你情绪不舒服的一件事是什么？\n也可以只说一句你现在的感受。",
+        "内容由AI生成，仅供参考",
+        "《服务协议》",
+        "《隐私政策》",
+        "↑"
+      ],
+      "navigationWarning": null,
+      "screenshot": {
+        "file": "归档证据\\2026-07-14-wp-c-growth-page-audit\\emotion-soothing\\emotion-soothing__emotion-soothing-entry.png",
+        "ok": true
+      },
+      "startedAt": "2026-07-14T10:31:06.865Z",
+      "completedAt": "2026-07-14T10:31:21.151Z"
+    }
+  ],
+  "fixtureCoverage": [],
+  "summary": {
+    "passed": 1,
+    "blockedLogin": 0,
+    "skipped": 0,
+    "failed": 0,
+    "fixturePages": 0
+  },
+  "completedAt": "2026-07-14T10:31:21.151Z"
+}

@@ -1,0 +1,3 @@
+﻿package=com.antgroup.aijk.android
+    versionCode=2261 minSdk=24 targetSdk=35
+    versionName=1.1.26.8000

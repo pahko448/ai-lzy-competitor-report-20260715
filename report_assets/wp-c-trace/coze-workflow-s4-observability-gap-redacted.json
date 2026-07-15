@@ -1,0 +1,54 @@
+{
+  "audit_date": "2026-07-14",
+  "timezone": "Asia/Shanghai",
+  "record_id": "MR-1783936211119-b55ba3f5",
+  "stage": "S4",
+  "status": "completed_with_observability_gap",
+  "target_window": "2026-07-14 19:33-19:34 Asia/Shanghai",
+  "target_workflows": [
+    "7533100739335307327",
+    "7528013366696198190",
+    "7524552829635248163"
+  ],
+  "confirmed_facts": [
+    "@coze/api version in the inspected mini-program repository is 1.3.9.",
+    "RunWorkflowData contains data, cost, token, msg, debug_url and execute_id.",
+    "The official SDK history method requires both workflowId and executeId.",
+    "The SDK history endpoint is GET /v1/workflows/{workflowId}/run_histories/{executeId}.",
+    "The mini-program wrapper returns only response.data and does not persist or return execute_id, debug_url, cost or token.",
+    "Local project logs and archived evidence contain no workflow execute_id for the target window.",
+    "The Coze canvas exposes a history button, but the read-only browser connection could not complete opening the history detail after two bounded attempts."
+  ],
+  "module_result": [
+    {
+      "module": "关键词判断",
+      "workflow_id": "7533100739335307327",
+      "historical_execution_status": "no-evidence",
+      "reason": "execute_id was not retained and no independently queryable historical record was recovered"
+    },
+    {
+      "module": "Aha 判断",
+      "workflow_id": "7528013366696198190",
+      "historical_execution_status": "no-evidence",
+      "reason": "execute_id was not retained and no independently queryable historical record was recovered"
+    },
+    {
+      "module": "营销话术生成",
+      "workflow_id": "7524552829635248163",
+      "historical_execution_status": "no-evidence",
+      "reason": "execute_id was not retained and no independently queryable historical record was recovered"
+    }
+  ],
+  "conclusion": "The 19:33-19:34 historical executions cannot be reconstructed from the official workflow history API because the required execute_id was discarded by the client wrapper and was not archived elsewhere. This is a confirmed observability/data-association gap, not proof that the workflows did or did not execute.",
+  "security": {
+    "credentials_copied": false,
+    "personal_data_copied": false
+  },
+  "actions_not_performed": [
+    "No workflow run",
+    "No new mini-program message",
+    "No save",
+    "No publish",
+    "No configuration change"
+  ]
+}

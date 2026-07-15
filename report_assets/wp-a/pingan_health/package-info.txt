@@ -1,0 +1,3 @@
+﻿package=com.pingan.papd
+    versionCode=94300 minSdk=21 targetSdk=30
+    versionName=9.43.0
